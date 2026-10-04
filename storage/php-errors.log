@@ -1,0 +1,54 @@
+[03-Oct-2026 19:13:43 UTC] Incident 723d73b1ef: Error at home.php:114
+[03-Oct-2026 19:47:44 UTC] Incident 80bedd6ae1: Error at ChatController.php:80
+[03-Oct-2026 19:47:45 UTC] Incident 78e55d638a: Error at ChatController.php:80
+[03-Oct-2026 19:47:48 UTC] Incident bd7cc4b112: Error at ChatController.php:80
+[03-Oct-2026 19:47:49 UTC] Incident 9f75baba80: Error at ChatController.php:80
+[03-Oct-2026 19:47:55 UTC] Incident 4bbdb1c613: Error at ChatController.php:80
+[03-Oct-2026 19:47:56 UTC] Incident 87d417f1cb: Error at ChatController.php:80
+[03-Oct-2026 19:48:05 UTC] Incident 23a80d0e4a: Error at ChatController.php:80
+[03-Oct-2026 19:48:06 UTC] Incident 8ef09eef9f: Error at ChatController.php:80
+[03-Oct-2026 19:48:18 UTC] Incident 833ac44fb9: Error at ChatController.php:80
+[03-Oct-2026 19:48:19 UTC] Incident 64d806c0a1: Error at ChatController.php:80
+[03-Oct-2026 19:48:32 UTC] Incident 0abacb831f: Error at ChatController.php:80
+[03-Oct-2026 19:48:33 UTC] Incident 9467154f7c: Error at ChatController.php:80
+[03-Oct-2026 19:48:34 UTC] Incident 7ea3006e84: Error at ChatController.php:80
+[03-Oct-2026 19:48:35 UTC] Incident dde41e940b: Error at ChatController.php:80
+[03-Oct-2026 19:48:36 UTC] Incident 26e3a18003: Error at ChatController.php:80
+[03-Oct-2026 19:48:40 UTC] Incident 0502e673a2: Error at ChatController.php:80
+[03-Oct-2026 19:48:43 UTC] Incident 5c5f6cc071: Error at ChatController.php:80
+[03-Oct-2026 19:48:46 UTC] Incident 4f25168286: Error at ChatController.php:80
+[03-Oct-2026 19:48:50 UTC] Incident 8053f2f774: Error at ChatController.php:80
+[03-Oct-2026 19:48:55 UTC] Incident a054adf01b: Error at ChatController.php:80
+[03-Oct-2026 19:49:06 UTC] Incident bb5313432a: Error at ChatController.php:80
+[03-Oct-2026 19:49:08 UTC] Incident cffe672ddb: Error at ChatController.php:80
+[03-Oct-2026 19:49:22 UTC] Incident 0a512d2f6a: Error at ChatController.php:80
+[03-Oct-2026 19:49:24 UTC] Incident a2946a63c1: Error at ChatController.php:80
+[03-Oct-2026 19:49:38 UTC] Incident 03fc61e7a4: Error at ChatController.php:80
+[03-Oct-2026 19:49:40 UTC] Incident 2027bedcb9: Error at ChatController.php:80
+[03-Oct-2026 20:21:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c/ck50318/chat/public_html/app/Lang/ky.php' (include_path='.:/opt/php82/share/pear') in /home/c/ck50318/chat/public_html/app/bootstrap.php:41
+Stack trace:
+#0 /home/c/ck50318/chat/public_html/public/index.php(6): require()
+#1 {main}
+  thrown in /home/c/ck50318/chat/public_html/app/bootstrap.php on line 41
+[03-Oct-2026 20:57:59 UTC] Incident c749570641: Error at AdminController.php:98
+[03-Oct-2026 20:59:09 UTC] Incident a4cb0955f7: Error at AdminBlogController.php:91
+[03-Oct-2026 21:16:36 UTC] Incident af9847d0bd: Error at Http.php:45
+[03-Oct-2026 21:16:38 UTC] Incident 4641104da4: Error at Http.php:45
+[03-Oct-2026 22:56:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c/ck50318/chat/public_html/app/Lang/ru.php' (include_path='.:/opt/php82/share/pear') in /home/c/ck50318/chat/public_html/app/bootstrap.php:41
+Stack trace:
+#0 /home/c/ck50318/chat/public_html/public/index.php(6): require()
+#1 {main}
+  thrown in /home/c/ck50318/chat/public_html/app/bootstrap.php on line 41
+[03-Oct-2026 23:00:20 UTC] Incident 5f75d1c1d5: Error at index.php:47
+[03-Oct-2026 23:00:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c/ck50318/chat/public_html/app/Lang/ru.php' (include_path='.:/opt/php82/share/pear') in /home/c/ck50318/chat/public_html/app/bootstrap.php:41
+Stack trace:
+#0 /home/c/ck50318/chat/public_html/public/index.php(6): require()
+#1 {main}
+  thrown in /home/c/ck50318/chat/public_html/app/bootstrap.php on line 41
+[03-Oct-2026 23:34:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/c/ck50318/chat/public_html/app/Lang/ru.php' (include_path='.:/opt/php82/share/pear') in /home/c/ck50318/chat/public_html/app/bootstrap.php:41
+Stack trace:
+#0 /home/c/ck50318/chat/public_html/public/index.php(6): require()
+#1 {main}
+  thrown in /home/c/ck50318/chat/public_html/app/bootstrap.php on line 41
+[04-Oct-2026 10:29:57 UTC] Automatic backup failed: PDOException
+[04-Oct-2026 11:12:01 UTC] Manual backup failed: PDOException

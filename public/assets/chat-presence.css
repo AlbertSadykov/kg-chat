@@ -1,0 +1,29 @@
+/* Миничат на внутренних страницах */
+.kg-mini { position: fixed; z-index: 100; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); width: min(380px, calc(100vw - 32px)); display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.kg-mini-launcher { min-height: 50px; padding: 12px 19px; border-radius: 18px; box-shadow: 0 8px 30px #0004; gap: 12px; }
+.kg-mini-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 50px; background: var(--surface); color: var(--text); font-size: 11px; }
+.kg-mini-panel { width: 100%; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 14px 55px #0006; animation: kg-mini-appear .2s ease-out; }
+.kg-mini-header { display: flex; gap: 12px; justify-content: space-between; align-items: center; padding: 15px 16px 10px; }
+.kg-mini-heading { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.kg-mini-heading strong { font-size: 15px; overflow-wrap: anywhere; }
+.kg-mini-peer { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
+.kg-mini-minimize { min-height: 34px; min-width: 34px; padding: 0; font-size: 23px; }
+.kg-mini-links { border-bottom: 1px solid var(--border); padding: 0 16px 12px; font-size: 11px; }
+.kg-mini-messages { display: flex; flex-direction: column; gap: 10px; height: min(35dvh, 285px); min-height: 160px; overflow-y: auto; overscroll-behavior: contain; padding: 14px; }
+.kg-mini-bubble { max-width: 88%; align-self: flex-start; background: var(--raised); border: 1px solid var(--border); border-radius: 13px 13px 13px 3px; padding: 9px 12px; overflow-wrap: anywhere; flex-shrink: 0; }
+.kg-mini-bubble.kg-mine { align-self: flex-end; background: var(--bubble-own); border-radius: 13px 13px 3px 13px; }
+.kg-mini-bubble p { white-space: pre-wrap; font-size: 13px; line-height: 1.55; margin: 0 0 5px; }
+.kg-mini-bubble small { display: block; color: var(--muted); text-align: right; font-size: 9px; }
+.kg-mini-status { padding: 0 14px; font-size: 12px; color: var(--muted); margin: 0; }
+.kg-mini-status:not(:empty) { padding-block: 8px; }
+.kg-mini-typing { min-height: 19px; padding: 0 14px; margin: 0; font-size: 10px; color: var(--muted); }
+.kg-mini-composer { display: flex; align-items: flex-end; gap: 8px; padding: 10px; border-top: 1px solid var(--border); }
+.kg-mini-composer textarea { margin: 0; height: 44px; min-height: 44px; max-height: 100px; resize: vertical; padding: 10px; font-size: 16px; }
+.kg-mini-composer button { flex-shrink: 0; min-height: 44px; width: 44px; padding: 8px; }
+.kg-notify-button { min-height: 38px; width: 38px; padding: 7px; border-radius: 10px; font-size: 16px; }
+.kg-notify-button.kg-notify-on { border-color: var(--accent); background: var(--bubble-own); }
+.kg-presence-toast { position: fixed; z-index: 120; top: 80px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); border: 1px solid var(--accent); border-radius: 14px; background: var(--surface); color: var(--text); padding: 13px 18px; box-shadow: var(--shadow); font-size: 13px; }
+.kg-presence-toast.kg-error { border-color: var(--danger); color: var(--danger); }
+@keyframes kg-mini-appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 440px) { .kg-mini { right: 12px; width: calc(100vw - 24px); } .kg-mini-messages { height: min(35dvh, 250px); } }
+@media (prefers-reduced-motion: reduce) { .kg-mini-panel { animation: none; } }
