@@ -56,5 +56,5 @@ jobs:
 
           git ftp "$DEPLOY_MODE" \
             --user "$FTP_USERNAME" \
-            --password-command 'printf "%s" "$FTP_PASSWORD"' \
+            --passwd "$FTP_PASSWORD" \
             "$FTP_URL"
