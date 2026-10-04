@@ -1,0 +1,14 @@
+^config/
+^storage/
+^install/
+^tests/
+^uploads/
+^public/uploads/
+^\.github/
+^\.gitignore$
+^\.git-ftp-ignore$
+^README\.md$
+^SOURCE\.md$
+.*\.zip$
+.*\.log$
+.*\.lock$

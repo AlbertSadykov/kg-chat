@@ -1,0 +1,60 @@
+name: Deploy website
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "init — первый деплой; push — обновление"
+        required: true
+        default: push
+        type: choice
+        options:
+          - push
+          - init
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install git-ftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-ftp
+
+      - name: Deploy
+        env:
+          FTP_URL: ${{ secrets.FTP_URL }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          DEPLOY_MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+
+          test -n "$FTP_URL"
+          test -n "$FTP_USERNAME"
+          test -n "$FTP_PASSWORD"
+
+          case "$DEPLOY_MODE" in
+            init|push) ;;
+            *) exit 1 ;;
+          esac
+
+          git ftp "$DEPLOY_MODE" \
+            --user "$FTP_USERNAME" \
+            --password-command 'printf "%s" "$FTP_PASSWORD"' \
+            "$FTP_URL"
