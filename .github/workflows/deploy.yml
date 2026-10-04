@@ -1,6 +1,9 @@
 name: Deploy website
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       mode:
@@ -41,7 +44,7 @@ jobs:
           FTP_URL: ${{ secrets.FTP_URL }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          DEPLOY_MODE: ${{ inputs.mode }}
+          DEPLOY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'push' }}
         run: |
           set -euo pipefail
 
