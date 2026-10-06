@@ -13,3 +13,4 @@ $presenceScript = ROOT . '/public/assets/chat-presence.js';
 ?>
 <script id="kg-chat-presence" type="application/json" data-config="<?= e(json_encode($presenceConfig, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT)) ?>"></script>
 <script src="<?= e(url('assets/chat-presence.js?v=' . (string) filemtime($presenceScript))) ?>" defer></script>
+  
